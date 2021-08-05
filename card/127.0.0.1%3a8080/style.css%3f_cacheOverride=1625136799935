@@ -1,0 +1,151 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* Nochmal Resets ansehen: Kevin Powell */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+    --spacer: 2em;
+}
+
+body {
+    display: flex;
+    padding: 2em;
+    height: 100vh;
+    /* width: 100vw; */
+    font-family: 'Lexend Deca',
+    sans-serif;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+}
+
+.flow-content > *+* {
+    margin-top: var(--spacer);
+}
+
+h2 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: #F2F2F2;
+    text-transform: uppercase;
+}
+
+.grid-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    padding: 3em;
+    color: #fff;
+    height: 100%;
+}
+
+article p {
+    /* line-height: 1.5em; */
+    /* https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case */
+    font-size: clamp(0.8rem, 0.3333rem + 2.0741vw, 1.5rem);
+}
+
+/* Why does "article footer" not work? */
+.article-footer {
+    margin-top: calc(var(--spacer)*2);
+}
+
+a {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 1.5em 2em;
+    text-decoration: none;
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 0.9em;
+}
+
+article:first-of-type {
+    background-color: var(--orange);
+}
+
+article:first-of-type a {
+    color: var(--orange);   
+}
+
+article:first-of-type a:hover {
+    background-color: var(--orange);
+    color: #fff;
+}
+
+article:nth-of-type(2) {
+    background-color: var(--cyan);
+}
+
+article:nth-of-type(2) a {
+    color: var(--cyan);
+}
+
+article:nth-of-type(2) a:hover {
+    background-color: var(--cyan);
+    color: #fff;
+}
+
+article:last-of-type {
+    background-color: var(--dark-cyan);
+}
+
+article:last-of-type a {
+    color: var(--dark-cyan);
+}
+
+article:last-of-type a:hover {
+    background-color: var(--dark-cyan);
+    color: #fff;
+}
+
+footer {
+    width: 100%;
+}
+
+
+@media (min-width: 768px) {
+    body {
+        align-items: center;
+        justify-content: center; 
+    }
+
+    .grid-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: clamp(600px, 50vw, 900px);
+    }
+
+    article {
+        padding: 1em;
+    }
+
+  
+
+    /* To prevent jumping of buttons I set the p container to an absolute value */
+    article p {
+        height: 300px;
+        line-height: 1.2em;
+    }
+
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

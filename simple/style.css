@@ -1,0 +1,49 @@
+  /* Describe why */
+  * {
+      box-sizing: border-box;
+  }
+
+:root {
+    /* Look up hsl */
+    --bg-violet: hsl(257, 40%, 49%);
+}
+
+
+  
+  body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-violet);
+  }
+
+
+  header img {
+      float: left;
+  }
+
+  section:first-of-type {
+      background-image: url("./images/bg-mobile.svg")
+  }
+
+
+  /* HELPER CLASS */
+
+.center {
+    margin: 0 auto;
+}
+
+
+  @media(min-width:768px) {
+      section:first-of-type {
+          background-image: url("./images/bg-desktop.svg")
+      }
+  }
+
+  .attribution {
+      font-size: 11px;
+      text-align: center;
+  }
+
+  .attribution a {
+      color: hsl(228, 45%, 44%);
+  }

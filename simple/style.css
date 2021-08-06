@@ -1,42 +1,178 @@
+  /* Debugging File in Chrome DEV Tools
+  https: //www.google.com/search?q=load+files+into+devtools+chrome&client=firefox-b-d&ei=nnoNYefZMduH9u8Pv5u1kAI&oq=load+files+into+devtools+chrome&gs_lcp=Cgdnd3Mtd2l6EAMyBggAEBYQHjoICCEQFhAdEB5KBAhBGAFQ2BZYox1grx9oAXAAeACAAawBiAHbA5IBAzEuM5gBAKABAcABAQ&sclient=gws-wiz&ved=0ahUKEwjnoKfi_pzyAhXbg_0HHb9NDSIQ4dUDCA0&uact=5
+  */
+
+/* CLAMP */
+
+  
   /* Describe why */
   * {
       box-sizing: border-box;
   }
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
 :root {
     /* Look up hsl */
     --bg-violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+    --heading: 'Poppins',
+    sans-serif;
+    --body-copy: 'Open Sans',
+    sans-serif;
 }
 
-
-  
   body {
-      margin: 0;
-      padding: 0;
-      background-color: var(--bg-violet);
+      font-family: var(--heading);
+      min-width: 100%;
+      min-height: 100%;
+      background: var(--bg-violet) url("./images/bg-mobile.svg") no-repeat top;
+      /* Made the formerly cut image 100% */
+      background-size: 100%;
+  }
+
+  header {
+      padding: 2em;
   }
 
 
   header img {
       float: left;
+      width: 40%;
+  }
+
+img{
+      display: block; 
+      width: 80%;
+      margin: 0 auto;
   }
 
   section:first-of-type {
-      background-image: url("./images/bg-mobile.svg")
+      /* check bg image */
+      /* background: url("./images/bg-mobile.svg") no-repeat center;
+      ; */
+      /* Don't set height via height. Do it with padding. Why? -> Kevin Powell */
+      padding-top: 30%;
+
   }
 
+  section:nth-of-type(2) {
+      margin-top: 3em;
+      height: 40vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid red;;
+  }
 
-  /* HELPER CLASS */
+  h1 {
+      font-weight: 600;
+      font-size: 2rem;
+  }
+  p {
+      font-size: 1.125rem;
+      line-height: 1.3em;
+      margin-bottom: 3em;
+  }
+ 
+  h1, p {
+    text-align: center;
+    color: #fff;
+    width: 90%;
+    color: ;
+  }
 
-.center {
-    margin: 0 auto;
+  button {
+      border-radius: 90px;
+      display: block;
+      width: 200px;
+      height: 40px;
+      cursor: pointer;
+      background-color: 2f2f2f;
+      margin: 0 auto;
+      margin-bottom: 4em;
+      /* Check font style */
+      font-family: inherit;
+      /* Modify border */
+  }
+
+  button:hover,
+  .social-media-container>div:hover {
+      background: var(--soft-magenta)
+    }
+
+.social-media-container {
+    display: flex;
+    justify-content: center;
 }
 
+.social-media-container > div {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    margin-left: 1rem;
+}
 
+  ion-icon {
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+  }
+
+  ion-icon, ion-icon + ion-icon {
+      margin: 0.5em;
+  }
+
+  footer {
+      width: 500px;
+      bottom: 0;
+      margin: 0 auto;
+      position: fixed;
+      text-align: center;
+  }
   @media(min-width:768px) {
-      section:first-of-type {
-          background-image: url("./images/bg-desktop.svg")
+      body {
+          display: flex;
+          min-height: 100vh;
+          flex-wrap: wrap;
+          background: var(--bg-violet) url("./images/bg-desktop.svg") no-repeat center fixed;
+          background-size: 100%;
       }
+      /* Make an flex item span 100%
+      https: //stackoverflow.com/questions/48101046/force-flex-item-to-span-full-row-width */
+      header {
+          width: 100%;
+      }
+
+      section {
+          width: 48%;
+      }
+
+      section:first-of-type {
+          padding: 0;
+      }
+
+      img {
+          width: 100%;
+      }
+
+      section:last-of-type {
+        padding-right: 2em;
+        margin-left: 2em;
+      }
+
+      h1, p {
+          text-align: left;
+      }
+
+    button {
+        margin-left: 0;
+    }
+
+    .social-media-container {
+       justify-content: flex-end;
+    }
+    
   }
 
   .attribution {

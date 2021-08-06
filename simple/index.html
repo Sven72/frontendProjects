@@ -3,50 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-<link rel="stylesheet" href="./style.css">
+  <!-- <link rel="stylesheet" href="./normalize.css"> -->
+  <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Huddle landing page with single introductory section</title>
-
 </head>
 <body>
-  <!-- Mobile First Approach -->
   <header>
     <img src="./images/logo.svg" alt="Company logo">
   </header>
   <!-- Check whether section is appropriate -->
-    <section>
-      <img src="./images/illustration-mockups.svg" alt="Illustration showing a screen with abstract content">
-    </section>
-    <section>
-
-    </section>
-</body>
-</html>
-  <h1>
-    Build The Community Your Fans Will Love
-  </h1>
-  <p>
-     Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
-    Create connections with your users as you engage in genuine discussion. 
-  </p>
-  <!-- Describe, why button and not <a> -->
-  <button>
-     Register
-  </button>
-<body>
-
-  
-
- 
-
- 
-
+  <section>
+    <img src="./images/illustration-mockups.svg" alt="Illustration showing a screen with abstract content">
+  </section>
+  <section>
+    <h1>
+      Build The Community Your Fans Will Love
+    </h1>
+    <p>
+      Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+      Create connections with your users as you engage in genuine discussion. 
+    </p>
+    <!-- Describe, why button and not <a> -->
+    <button>
+      Register
+    </button>
+    <!-- Integrate ARIA Role -->
+    <!-- https://github.com/w3c/aria/issues/1012 -->
+    <div class="social-media-container" role="region">
+      <!-- Should I use artice because it is selfcontaining content? -->
+      <div>
+        <ion-icon name="logo-facebook"><a href="#"></a></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="logo-twitter"><a href="#"></a></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="logo-instagram"><a href="#"></a></ion-icon> 
+      </div>
+    </div>
+  </section>
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Left aligned</a>.
     </p>
   </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

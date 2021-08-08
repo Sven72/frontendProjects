@@ -6,6 +6,7 @@
 
   
   /* Describe why */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
   * {
       box-sizing: border-box;
   }
@@ -38,15 +39,20 @@
 
   header img {
       float: left;
-      width: 40%;
+      /* As soon as 35vw is greater than 150px, 35vw kicks in. But when 30em becomes greater that 35vw, 30em kicks in */
+      width: clamp(150px, 35vw, 30em) ;
   }
 
 img{
       display: block; 
+      /* Solve it with clamp */
       width: 80%;
       margin: 0 auto;
   }
 
+section {
+    max-width: 780px;
+}
   section:first-of-type {
       /* check bg image */
       /* background: url("./images/bg-mobile.svg") no-repeat center;
@@ -65,12 +71,15 @@ img{
       border: 1px solid red;;
   }
 
+  /* Use clamp for the Typography */
+  /* Reduce width of content container */
+
   h1 {
       font-weight: 600;
       font-size: 2rem;
   }
   p {
-      font-size: 1.125rem;
+      font-size: clamp(1.125rem, 2vw, 1.5rem);
       line-height: 1.3em;
       margin-bottom: 3em;
   }
@@ -79,13 +88,15 @@ img{
     text-align: center;
     color: #fff;
     width: 90%;
-    color: ;
   }
 
+  /* Button nearer to copy */
   button {
       border-radius: 90px;
       display: block;
+      /* No absolute values */
       width: 200px;
+      /* No absolute values */
       height: 40px;
       cursor: pointer;
       background-color: 2f2f2f;
@@ -149,6 +160,7 @@ img{
       }
 
       section:first-of-type {
+          border: 1px solid green;
           padding: 0;
       }
 

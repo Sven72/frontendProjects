@@ -4,6 +4,8 @@
 
 /* CLAMP */
 
+/* TODO - check mobile view: Button and social icons */
+
   
   /* Describe why */
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
@@ -30,6 +32,7 @@
       background: var(--bg-violet) url("./images/bg-mobile.svg") no-repeat top;
       /* Made the formerly cut image 100% */
       background-size: 100%;
+      padding: 2em;
   }
 
   header {
@@ -59,6 +62,7 @@ section {
       ; */
       /* Don't set height via height. Do it with padding. Why? -> Kevin Powell */
       padding-top: 30%;
+      border: 1px solid green;
 
   }
 

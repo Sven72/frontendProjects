@@ -35,6 +35,8 @@
       padding: 2em;
   }
 
+  /* TODO - Add padding for header -> mobile view */
+
   header img {
       float: left;
       /* As soon as 35vw is greater than 150px, 35vw kicks in. But when 30em becomes greater that 35vw, 30em kicks in */

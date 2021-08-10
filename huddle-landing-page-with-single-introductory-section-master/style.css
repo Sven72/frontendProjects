@@ -14,6 +14,16 @@
     sans-serif;
 }
 
+/* A bootstrap class hiding elements, which are build exclusevily for screenreaders */
+  .sr-only {
+      position: absolute;
+      left: -10000px;
+      width: 1px;
+      height: 1px;
+      top: auto;
+      overflow: hidden;
+  }
+
   body {
       background: var(--bg-violet) url("./images/bg-mobile.svg") no-repeat top;
       background-size: 100%;

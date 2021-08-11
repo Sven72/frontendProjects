@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+}
+
+section:first-of-type {
+    display: flex;
+    /* Use clamp here */
+    width: 90%;
+    background-color: red;
+}
+
+div {
+    border: 2px solid black;
+    width: 25%;
+    height: 50%;
+}
+
+/* <img src="./assets/179_spiderman.jpg" alt="Image of Spidey"> */
+section:first-of-type div:first-of-type {
+    background-image: url('./assets/179_spiderman.jpg');
+}
+
+img {
+    border-radius: 50%;
+    object-fit: cover ;
+}

@@ -37,7 +37,7 @@ section:first-of-type div:last-of-type {
 
 }
 
-div.active {
+.image-class.active {
     border: 10px solid blue;
 }
 

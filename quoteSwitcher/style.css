@@ -13,10 +13,10 @@ section:first-of-type {
 }
 
 div {
-    width: 700px;
-    height: 700px;
+    width: 30vw;
+    height: 30vh;
     border: 10px solid red;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
 img {
@@ -24,18 +24,31 @@ img {
 /* <img src="./assets/179_spiderman.jpg" alt="Image of Spidey"> */
 section:first-of-type div:first-of-type {
     background-image: url('./assets/179_spiderman.jpg');
-    background-position: left;
+    background-position: center;
 }
 section:first-of-type div:nth-of-type(2) {
     background-image: url('./assets/unnamed.jpg');
-    background-position: left;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 section:first-of-type div:last-of-type {
     background-image: url('./assets/spongebob-characters-mr-krabs-text-label-plot-peel-transparent-png-1397127.png');
-    background-position: left;
+    background-position: center;
 
 }
+
+
+section:last-of-type {
+    width: 30vw;
+    color: green;
+    margin: 0 auto;
+
+}
+
+/* .image-class{
+    border: 10px solid red;
+} */
 
 .image-class.active {
     border: 10px solid blue;

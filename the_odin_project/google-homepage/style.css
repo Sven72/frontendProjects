@@ -9,16 +9,19 @@
     --bg-clr: #fff;
     --light-gray: #f2f2f2;
     --dark-gray: #606469;
+    --media-gray: #9AA0A6;
 }
 
 input {
-    content: url("./assets/search_black_24dp.svg");
+    /* content: url("./assets/search_black_24dp.svg");
     background-image: url("./assets/search_black_24dp.svg");
     background-repeat: no-repeat;
-    background-size: 16px 16px;
+    background-size: 16px 16px; */
    
-
+    position: relative;
 }
+
+
 
 body {
     width: 100vw;
@@ -32,22 +35,74 @@ body {
     border: 1px solid red;
     margin: 10em auto;
     text-align: center;
+    position: relative;
     /* display: flex; */
 }
 
 input {
-    width: 100%;
+    width: 70%;
     padding: 1em;
     border-radius: 30px;
+    display: block;
+    margin: 0 auto;
 }
+
 
 input:hover {
     box-shadow: 20px 10px 10px var(--light-gray);
 }
 
-section img {
-    /* width: 100%; */
+.form-outer {
+    max-width: 300px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.container {
+    width: 90%;
+    max-width: 1160px;
+    margin: auto;
+}
+
+.form-input {
+    margin: 10px auto;
+    position: relative;
+    /* display: flex; 
+    align-items: center;
+justify-content: center; */
+}
+
+input {
+    border: 2px solid #eee;
+    padding: 5px 10px 5px 50px;
+    font-size: 18px;
+    line-height: 30px;
+    outline: 0;
+    /* display: block; */
+    width: 90%;
+}
+
+.icon-search {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    font-size: 25px;
+    color: var(--medium-gray);
+    height: 100%;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TODO Insert Mic */
+/* TODO Understand this placement in input */
+
+
+
+
 a {
     text-decoration: none;
     color: var(--dark-gray);

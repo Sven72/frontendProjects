@@ -3,20 +3,42 @@
 <!-- Build this page 
 https://www.google.com/search?q=build+this+webpage
 -->
+
+<!-- Ressources: https://blog.stackfindover.com/how-to-add-icon-inside-input-field/ -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Google</title>
 </head>
 <body>
-   <section class="main"><img src="./assets/googlelogo_color_272x92dp.png" alt="Logo of Google"></img>
+   <section class="main">
+       <img src="./assets/googlelogo_color_272x92dp.png" alt="Logo of Google"></img>
     <!-- Add JS to id="cta" -->
-    <input type="text">
- 
-    
+        <div class="form-outer">
+            <div class="container">
+                <form class="form">
+                <div class="form-input">
+                    <span class="icon-search">
+                        <i class="material-icons-outlined" aria-hidden="true">search</i>
+                    </span>
+                    <input type="text" name="text">
+
+                    
+
+
+                     <span class="icon-mic">
+                        <i class="material-icons-outlined" aria-hidden="true">mic</i>
+                    </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+      
     <button>Google Search</button><button id="cta">Placeholder</button>
 </section>
 <footer>

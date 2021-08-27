@@ -13,14 +13,8 @@
 }
 
 input {
-    /* content: url("./assets/search_black_24dp.svg");
-    background-image: url("./assets/search_black_24dp.svg");
-    background-repeat: no-repeat;
-    background-size: 16px 16px; */
-   
     position: relative;
 }
-
 
 
 body {
@@ -53,7 +47,7 @@ input:hover {
 }
 
 .form-outer {
-    max-width: 300px;
+    max-width: 600px;
     margin: auto;
     display: flex;
     align-items: center;
@@ -61,17 +55,13 @@ input:hover {
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1160px;
     margin: auto;
 }
 
 .form-input {
-    margin: 10px auto;
     position: relative;
-    /* display: flex; 
-    align-items: center;
-justify-content: center; */
 }
 
 input {
@@ -80,13 +70,11 @@ input {
     font-size: 18px;
     line-height: 30px;
     outline: 0;
-    /* display: block; */
-    width: 90%;
+    width: 100%;
 }
 
-.icon-search {
+.icon {
     position: absolute;
-    left: 15px;
     top: 0;
     font-size: 25px;
     color: var(--medium-gray);
@@ -97,8 +85,35 @@ input {
     justify-content: center;
 }
 
+.icon-search {
+    left: 15px;
+}
+
+.icon-mic {
+    right: 15px;
+}
+
+.icon-mic:hover {
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    display: none;
+    /* visibility: hidden; */
+}
+/* Maybe JS solution to not break layout */
+
+
+
+
+
 /* TODO Insert Mic */
 /* TODO Understand this placement in input */
+/* TODO CSS Tooltip https://stackoverflow.com/questions/7117073/add-a-tooltip-to-a-div */
+/* TODO Fix JS at mouseleave event */
+/* TODO: Fix Button Style */
+
+
 
 
 

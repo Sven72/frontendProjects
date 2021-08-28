@@ -102,9 +102,21 @@ input {
     position: absolute;
 }
 
+.icon-mic::after,
+.icon-mic::before {   
+    /* translatex */
+    position: absolute;
+    top: 1.5em;
+}
 
-.icon:hover::before {
-    content: attr(data-tooltip)
+.icon-mic::before {
+content: attr(data-tooltip);
+background-color: #000;
+color: #fff;
+width: max-content;
+/* max-width:100%; */
+font-size: 10px;
+padding: 0.5em;
 }
 
 /* TODO Insert Mic */

@@ -90,6 +90,7 @@ input {
 }
 
 .icon-mic {
+    /* position: relative; */
     right: 15px;
 }
 
@@ -99,11 +100,16 @@ input {
 
 .tooltip .tooltiptext {
     display: none;
+    position: absolute;
+    bottom: 0;
+
     /* visibility: hidden; */
 }
 /* Maybe JS solution to not break layout */
 
-
+.tooltip:hover{
+    display: block;
+}
 
 
 

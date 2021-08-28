@@ -98,24 +98,20 @@ input {
     cursor: pointer;
 }
 
-.tooltip .tooltiptext {
-    display: none;
+.tooltiptext {
     position: absolute;
-    bottom: 0;
-
-    /* visibility: hidden; */
-}
-/* Maybe JS solution to not break layout */
-
-.tooltip:hover{
-    display: block;
 }
 
 
+.icon:hover::before {
+    content: attr(data-tooltip)
+}
 
 /* TODO Insert Mic */
 /* TODO Understand this placement in input */
 /* TODO CSS Tooltip https://stackoverflow.com/questions/7117073/add-a-tooltip-to-a-div */
+/* TODO Tooltip with Data Attribute
+https: //www.youtube.com/watch?v=ujlpzTyJp-M&t=204s */
 /* TODO Fix JS at mouseleave event */
 /* TODO: Fix Button Style */
 

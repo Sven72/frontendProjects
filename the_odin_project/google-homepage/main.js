@@ -1,13 +1,18 @@
 let button = document.getElementById("cta");
 button.innerText = "I'm Feeling Lucky";
 
+let refreshIntervalId = null;
 button.onmouseover = () => {
-  setTimeout(() => {
-    setInterval(() => {
-      button.innerText = "";
-      choosePhrase();
-    }, 500);
-  }, 1000);
+  // setTimeout(() => {
+  refreshIntervalId = setInterval(() => {
+    button.innerText = "";
+    choosePhrase();
+  }, 500);
+  // }, 1000);
+};
+
+button.mouseleave = () => {
+  clearInterval(refreshIntervalId) && (refreshIntervalId = null);
 };
 
 let phrases = [

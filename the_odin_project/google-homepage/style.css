@@ -12,9 +12,6 @@
     --media-gray: #9AA0A6;
 }
 
-input {
-    position: relative;
-}
 
 
 body {
@@ -26,21 +23,23 @@ body {
 
 .main {
     width: 70vw;
-    border: 1px solid red;
     margin: 10em auto;
     text-align: center;
     position: relative;
-    /* display: flex; */
 }
 
+
 input {
-    width: 70%;
-    padding: 1em;
+    position: relative;
     border-radius: 30px;
     display: block;
     margin: 0 auto;
+    border: 2px solid #eee;
+    padding: 5px 10px 5px 50px;
+    font-size: 18px;
+    line-height: 30px;
+    width: 100%;
 }
-
 
 input:hover {
     box-shadow: 20px 10px 10px var(--light-gray);
@@ -64,15 +63,6 @@ input:hover {
     position: relative;
 }
 
-input {
-    border: 2px solid #eee;
-    padding: 5px 10px 5px 50px;
-    font-size: 18px;
-    line-height: 30px;
-    outline: 0;
-    width: 100%;
-}
-
 .icon {
     position: absolute;
     top: 0;
@@ -90,7 +80,6 @@ input {
 }
 
 .icon-mic {
-    /* position: relative; */
     right: 15px;
 }
 
@@ -98,15 +87,14 @@ input {
     cursor: pointer;
 }
 
-.tooltiptext {
-    position: absolute;
-}
-
 .icon-mic::after,
 .icon-mic::before {   
-    /* translatex */
     position: absolute;
-    top: 1.5em;
+    top: 4.5em;
+    --scale: 0;
+    --arrow-size: 10px;
+    --translate-y: -200%;
+    transform: scale(var(--scale));
 }
 
 .icon-mic::before {
@@ -114,10 +102,24 @@ content: attr(data-tooltip);
 background-color: #000;
 color: #fff;
 width: max-content;
-/* max-width:100%; */
-font-size: 10px;
+font-size: 0.5em;
 padding: 0.5em;
 }
+
+.icon-mic::after {
+    content: '';
+    border: var(--arrow-size) solid transparent;
+    border-bottom-color: #000;
+    top: 85%;
+    z-index: -1;
+}
+
+.icon-mic:hover::before,
+.icon-mic:hover::after {
+    --scale: 1;
+}
+
+
 
 /* TODO Insert Mic */
 /* TODO Understand this placement in input */
@@ -150,8 +152,6 @@ footer {
     width: 100%;
     margin: 0 auto;
     background-color: var(--light-gray);
-    /* height: 2em; */
-    border: 1px solid red;
     padding: 1em;
 }
 
